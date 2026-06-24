@@ -1,0 +1,21 @@
+{
+  "LOG": true,
+  "API_TIMEOUT_MS": 600000,
+  "Providers": [
+    {
+      "name": "sakana",
+      "api_base_url": "https://api.sakana.ai/v1/responses",
+      "api_key": "YOUR_SAKANA_API_KEY",
+      "models": ["fugu", "fugu-ultra"],
+      "transformer": {
+        "use": ["openai-responses"]
+      }
+    }
+  ],
+  "Router": {
+    "default": "sakana,fugu-ultra",
+    "background": "sakana,fugu",
+    "think": "sakana,fugu-ultra",
+    "longContext": "sakana,fugu-ultra"
+  }
+}

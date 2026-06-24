@@ -1,0 +1,5 @@
+# Never commit a real config with your API key
+config.json
+.claude-code-router/
+*.key
+.env
